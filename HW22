@@ -1,0 +1,81 @@
+#1
+x = int(input())
+if (x in range(10,22)) or (x in range(30,40)):
+    print('Точка в множестве')
+else:
+    print('Точка вне множества')
+#2
+    x = int(input())
+y = int(input())
+if ((x in range(-5,1)) and (y in range(-5,1))) or ((x in range(2,8)) and (y in range(2,8))):
+    print('Да')
+else:
+    print('Нет')
+#3
+s = float(input())
+t = float(input())
+v = s//t
+if v in range (31):
+    print('Медлено')
+if v in range(29,61):
+    print('Средне')
+if (v>60):
+    print('Быстро')
+#4
+x = (int(input()))
+y = sorted(list(str(x)))
+if int(y[2]) - int(y[0])==int(y[1]):
+    print('Число', x, '- "интересное" число')
+else:
+    print('Число', x, '- "неинтересное" число')
+#5
+x = input()
+if (len(x)>2) and (len(x)<16):
+    print('Ник-нейм принят')
+if (len(x)<3):
+    print('Ник-нейм должен состоять минимум из 3 символов!')
+if (len(x)>15):
+    print('Никнейм может состоять максимум из 15 символов!')
+#6
+x=float(input())
+y=float(input())
+#Первая четверть
+if x>0 and y>0:
+    print('Точка принадлежит первой четверти','Введите две строки',sep='\n')
+    a=input()
+    b=input()
+    minn = min(a,b)
+    print(minn,'- самая короткая')
+#Вторая четверть
+if x<0 and y>0:
+    print('Точка принадлежит второй четверти')
+    f = ((2*(abs(x))) - y)/(y*y)
+    print('f =',f)
+#Третья четверть
+if x<0 and y<0:
+    print('Точка принадлежит третьей четверти','Введите строку', sep='\n')
+    c=input()
+    d=x*y*len(c)
+    print(d)
+#Четвертая четверть
+if x>0 and y<0:
+    print('Точка принадлежит четвертой четверти')
+    if abs(x) == max(abs(x),abs(y)):
+        print('Координата x - наибольшая по модулю')
+    if abs(y) == max(abs(x), abs(y)):
+        print('Координата y - наибольшая по модулю')
+    if abs(x) == abs(y):
+        print('Координаты равны по модулю')
+#Если x или y равны нулю
+else:
+    print('Точка находится на оси')
+#7
+x=input('Введите строку: ')
+if 'кот' in x:
+    print('Кот в мешке!')
+else:
+    print('Котов не обнаружено, сэр!')
+
+
+
+    
